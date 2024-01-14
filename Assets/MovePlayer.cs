@@ -35,7 +35,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameManager>().DecreaseLives();
         }
         else if (other.gameObject.tag == "Scoring")
         {
