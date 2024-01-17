@@ -3,9 +3,6 @@ using UnityEngine;
 
 class ScorePoints : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
+    [SerializeField] Text uiText;
 
 }

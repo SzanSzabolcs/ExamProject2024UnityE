@@ -17,20 +17,3 @@ class Spawner : MonoBehaviour
         Instantiate(stalactitePrefab, new Vector3(transform.position.x, randomY, 0f), Quaternion.identity);
     }
 }
-/*
-class StalactiteMovement : MonoBehaviour
-{
-    public float speed = 2f;
-
-    void Update()
-    {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
-
-        // Ellenõrizd, hogy a cseppkõ elhagyta-e a képernyõt, és ha igen, akkor töröld el.
-        if (transform.position.x < -10f)
-        {
-            Destroy(gameObject);
-        }
-    }
-}
-*/
