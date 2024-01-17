@@ -1,16 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
-public class GameManager : MonoBehaviour
+class GameManager : MonoBehaviour
 {
     [SerializeField] int score;
-    [SerializeField] private Text scoreText;
-    private int lives = 3; // Kezdeti életek száma
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] int lives = 3; // Kezdeti életek száma
 
-    public Image Live03;
-    public Image Live02;
-    public Image Live01;
+    [SerializeField] Image Live03;
+    [SerializeField] Image Live02;
+    [SerializeField] Image Live01;
 
     void Start()
     {
@@ -18,19 +19,19 @@ public class GameManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    public void GameOver()
+    void GameOver()
     {
         Debug.Log("Game over");
     }
 
-    public void IncreaseScore()
+    void IncreaseScore()
     {
         score++;
         UpdateScoreUI();
 
     }
     // Életek csökkentése
-    public void DecreaseLives()
+    void DecreaseLives()
     {
         lives--;
 

@@ -734,7 +734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1696692570}
+  lives: 3
   Live03: {fileID: 970487161}
   Live02: {fileID: 564357665}
   Live01: {fileID: 2031965569}
