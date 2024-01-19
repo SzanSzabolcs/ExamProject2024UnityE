@@ -24,14 +24,31 @@ class GameManager : MonoBehaviour
         Debug.Log("Game over");
     }
 
-    void IncreaseScore()
+    public void IncreaseScore()
     {
         score++;
         UpdateScoreUI();
 
+        // Ellenõrizzük, hogy elértük-e a 100 pontot
+        if (score == 100)
+        {
+            // Hozzáadjuk a plusz életet
+            IncreaseLives();
+        }
     }
+
+    void IncreaseLives()
+    {
+        // Ellenõrizzük, hogy az életek ne legyenek több mint 3
+        if (lives < 3)
+        {
+            lives++;
+            UpdateLivesUI();
+        }
+    }
+
     // Életek csökkentése
-    void DecreaseLives()
+    public void DecreaseLives()
     {
         lives--;
 
@@ -46,7 +63,7 @@ class GameManager : MonoBehaviour
     }
 
     // UI frissítése a jelenlegi életekkel
-    void UpdateLivesUI()
+    public void UpdateLivesUI()
     {
         // Ellenõrizzük, hogy a képek ne null legyenek, és ha nem, akkor frissítjük azokat
         if (Live03 != null && Live02 != null && Live01 != null)
@@ -90,7 +107,6 @@ class GameManager : MonoBehaviour
             // A szöveget frissítjük a jelenlegi pontszámmal
             scoreText.text = "SCORE: " + score.ToString("D3");
         }
-
     }
 }
 
