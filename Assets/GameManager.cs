@@ -2,8 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 class GameManager : MonoBehaviour
+
 {
     [SerializeField] int score;
     [SerializeField] TMP_Text scoreText;
@@ -12,6 +14,7 @@ class GameManager : MonoBehaviour
     [SerializeField] Image Live03;
     [SerializeField] Image Live02;
     [SerializeField] Image Live01;
+    [SerializeField] GameObject gameOverObject;
 
     void Start()
     {
@@ -19,9 +22,23 @@ class GameManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    void GameOver()
+ 
+    public void RestartGame()
     {
-        Debug.Log("Game over");
+        SceneManager.LoadScene("GameScene");
+        Time.timeScale = 1f;
+    }
+
+    public void MainmenuGame()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        //GAME OVER SCREEN ON
+        gameOverObject.SetActive(true);
     }
 
     public void IncreaseScore()
