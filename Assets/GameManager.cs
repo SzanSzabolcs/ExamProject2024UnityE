@@ -45,6 +45,13 @@ class GameManager : MonoBehaviour
         Credits.SetActive(true);
     }
 
+    public void CreditsOffGame()
+    {
+        Demon.SetActive(true);
+        Canvas.SetActive(true);
+        Credits.SetActive(false);
+    }
+
     public void GameOver()
     {
         Time.timeScale = 0f;

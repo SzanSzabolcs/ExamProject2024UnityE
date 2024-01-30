@@ -835,6 +835,8 @@ MonoBehaviour:
   Demon: {fileID: 95483522}
   Canvas: {fileID: 788471415}
   Credits: {fileID: 53863696}
+  pingSound: {fileID: 8300000, guid: a1555b0dad9ffcb49b2b5f8c2c769654, type: 3}
+  audioSource: {fileID: 0}
 --- !u!4 &727485839
 Transform:
   m_ObjectHideFlags: 0
@@ -2058,7 +2060,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 727485838}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MainmenuGame
+        m_MethodName: CreditsOffGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
