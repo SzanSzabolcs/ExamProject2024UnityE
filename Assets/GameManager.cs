@@ -15,6 +15,9 @@ class GameManager : MonoBehaviour
     [SerializeField] Image Live02;
     [SerializeField] Image Live01;
     [SerializeField] GameObject gameOverObject;
+    [SerializeField] GameObject Demon;
+    [SerializeField] GameObject Canvas;
+    [SerializeField] GameObject Credits;
 
     void Start()
     {
@@ -32,6 +35,14 @@ class GameManager : MonoBehaviour
     public void MainmenuGame()
     {
         SceneManager.LoadScene("MenuScene");
+        Time.timeScale = 1f;
+    }
+
+    public void CreditsGame()
+    {
+        Demon.SetActive(false);
+        Canvas.SetActive(false);
+        Credits.SetActive(true);
     }
 
     public void GameOver()
@@ -39,6 +50,12 @@ class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         //GAME OVER SCREEN ON
         gameOverObject.SetActive(true);
+    }
+
+    public void GameQuit()
+    {
+        // Játék leállítása
+        Application.Quit();
     }
 
     public void IncreaseScore()

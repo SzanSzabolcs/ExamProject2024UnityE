@@ -41,6 +41,10 @@ public class MovePlayer : MonoBehaviour
         {
             FindObjectOfType<GameManager>().IncreaseScore();
         }
+        else if (other.gameObject.tag == "Blackline")
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
     }
 
 
