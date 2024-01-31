@@ -835,8 +835,6 @@ MonoBehaviour:
   Demon: {fileID: 95483522}
   Canvas: {fileID: 788471415}
   Credits: {fileID: 53863696}
-  pingSound: {fileID: 8300000, guid: a1555b0dad9ffcb49b2b5f8c2c769654, type: 3}
-  audioSource: {fileID: 0}
 --- !u!4 &727485839
 Transform:
   m_ObjectHideFlags: 0
@@ -2183,7 +2181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: cc35afd292fc349128b36a291fb3a165, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 1, g: 0.8941177, b: 0.23137257, a: 0.21960784}
   m_FlipX: 0
   m_FlipY: 0

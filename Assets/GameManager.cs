@@ -19,13 +19,13 @@ class GameManager : MonoBehaviour
     [SerializeField] GameObject Canvas;
     [SerializeField] GameObject Credits;
 
+
     void Start()
     {
         UpdateLivesUI();
         UpdateScoreUI();
     }
 
- 
     public void RestartGame()
     {
         SceneManager.LoadScene("GameScene");
