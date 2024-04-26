@@ -19,6 +19,8 @@ class GameManager : MonoBehaviour
     [SerializeField] GameObject Canvas;
     [SerializeField] GameObject Credits;
 
+    // AudioManager audioManager;
+
 
     void Start()
     {
